@@ -1,3 +1,0 @@
-S = load_dataset()
-t_vector = S[0,:]
-input_signal = S[1,:]
