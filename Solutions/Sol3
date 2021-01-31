@@ -10,5 +10,5 @@ def CreateFilter(filter_order,filter_type,cutoff):
   ######################
 
 
-  b,a = signal.butter(filter_order,cutoff,filter_type,analog=True)
+  b,a = signal.butter(filter_order,cutoff,filter_type)
   return b,a
