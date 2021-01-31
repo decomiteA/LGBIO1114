@@ -1,16 +1,21 @@
-###################
-#  VOTRE CODE ICI #
-###################
-
-# Passe-bas 
-
-b,a = CreateFilter(6,'low',0.5)
+b,a = CreateFilter(6,'low',(0.5))
 lowpasssig = signal.filtfilt(b,a,input_signal)
-b1,a1 = CreateFilter(6,'high',2500/10000)
-higpasssig = signal.filtfilt(b1,a1,input_signal)
-b2,a2 = CreateFilter(6,'bandpass',[0.2,0.8])
-
-
 Tf1,f1 = computeTF(t_vector,lowpasssig)
-tf_sig = abs(Tf1[:len(input_signal)//2]/len(input_signal))
+tf_sig = 2*abs(Tf1[:len(input_signal)//2]/len(input_signal))
 RepresFreq(f1,tf_sig)
+
+# Passe-haut 
+
+b2,a2 = CreateFilter(6,'high',0.5)
+highpassig = signal.filtfilt(b2,a2,input_signal)
+Tf2,f2 = computeTF(t_vector,highpassig)
+tf_sig2 = 2*abs(Tf2[:len(input_signal)//2]/len(input_signal))
+RepresFreq(f2,tf_sig2)
+
+# Passe-bande
+
+b3,a3 = CreateFilter(6,'band',(0.25,0.5))
+bandpassig = signal.filtfilt(b3,a3,input_signal)
+Tf3,f3 = computeTF(t_vector,bandpassig)
+tf_sig3 = 2*abs(Tf3[:len(input_signal)//2]/len(input_signal))
+RepresFreq(f3,tf_sig3)
