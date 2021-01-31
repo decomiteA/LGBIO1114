@@ -1,0 +1,26 @@
+def RepresFreq(f_vecteur,tf_sig):
+  # Le but de cette fonction est de représenter la transformée de Fourier d'un signal
+  # Inputs : f_vector est le vecteur de fréquences
+  #          tf_sig est la transformée de fourier qu'on veut représenter
+  ######################
+  ### Votre code ici ###
+  ######################
+
+  plt.stem(f_vecteur,tf_sig)
+  plt.title('Representation frequentielle')
+  plt.xlabel('Frequence [Hz]')
+  plt.ylabel('Intensite')
+  plt.show()
+
+
+######################
+### Votre code ici ###
+######################
+
+# Grace aux fonctions définies ci-dessus calculez et representez la transformee de Fourier du signal fourni.
+
+
+
+tf_sig,f_vector = computeTF(t_vector,input_signal)
+tf_sig = abs(tf_sig[:len(input_signal)//2]/len(input_signal))
+RepresFreq(f_vector,tf_sig)
