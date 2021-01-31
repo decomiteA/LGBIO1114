@@ -1,6 +1,15 @@
 # LGBIO1114
 Support for the exercises sessions of LGBIO1114 UCLouvain - Year 2020-2021
 
+# Séances d'exercices - Partie Philippe Lefèvre
+
+1. Rappels sur la tranformée de Fourier et les filtres.
+
+2. Application de traitement de signal dans le cas d'un appareil auditif
+
+3. Application du traitement de signals dans le cas d'un implant cochléaire
+
+# Liens vers les séances
 
 |   | Run | View |
 | - | --- | ---- |
