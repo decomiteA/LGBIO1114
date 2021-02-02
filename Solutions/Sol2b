@@ -22,5 +22,5 @@ def RepresFreq(f_vecteur,tf_sig):
 
 
 tf_sig,f_vector = computeTF(t_vector,input_signal)
-tf_sig = abs(tf_sig[:len(input_signal)//2]/len(input_signal))
+tf_sig = 2*abs(tf_sig[:len(input_signal)//2]/len(input_signal))
 RepresFreq(f_vector,tf_sig)
